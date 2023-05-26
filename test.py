@@ -100,11 +100,8 @@ def valuation(reqArea, area, price):
          test_list.append(standard_deviaiont_multipliear)
          test_list.append(is_it_outlier)
          if (is_it_outlier == True):
-             print(tested_price)
              area.remove(tested_area)
              price.remove(tested_price)
-             print(final_price)
-             print(final_area)
          if final_price == []:
              final_price.append(reqArea*1000)
              
@@ -128,11 +125,6 @@ def valuation(reqArea, area, price):
                 min_values_abs.pop(index_min1)
                 index_min2 =  min_values_abs.index(min(min_values_abs))
                 interpolate_means = final_price[index_min1] + (final_price[index_min2]-final_price[index_min1])/(final_area[index_min2] - final_area[index_min1]) * (reqArea - final_area[index_min1])
-                print(final_price[index_min1])
-                print(final_price[index_min2])
-                print(final_area[index_min1])
-                print(final_area[index_min2])
-
 
 
                 
